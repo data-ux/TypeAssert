@@ -39,11 +39,16 @@ congrats("John", new Car("Toyota") );
 Object interfaces can be defined with JS object literals describing the required properties & methods.
 
 ```javascript
-function congrats(name, location){
-	typeAssert(arguments, [String, {latitude: Number, longitude: Number}]);
-	return "Congratulations, " + name + "! Your latitude is " + location.latitude + " degrees"; 
+function congrats(data){
+	typeAssert(arguments, [{toString: Function, location: {latitude: Number, longitude: Number}}]);
+	return "Your location is " + data.toString(); 
 }
-congrats("John", {comment: "Road to cabin", latitude: 60.34, longitude: 24.45});
+congrats({
+    toString: function(){
+        return "(lat: " + this.location.latitude + ", lng: " + this.location.longitude + ")";
+    }, 
+    location: {latitude: 60.34, longitude: 24.45}
+});
 ```
 
 ## Why should I use TypeAssert?
