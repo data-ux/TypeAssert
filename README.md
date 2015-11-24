@@ -4,7 +4,7 @@ TypeAssert
 Simple run-time type checker for JS. Ensures that function arguments match a specified type signature.
 
 ## How can I use it?
-Include the **typeassert.js** file into your project via HTML `<script>` tag or AMD/CommonJS `require()`. Specify the allowed argument types on the the first line of any function:
+Include the **typeAssert.js** file into your project via HTML `<script>` tag or AMD/CommonJS `require()`. Specify the allowed argument types on the the first line of any function:
 
 ```javascript
 function congrats(name, age){
