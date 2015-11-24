@@ -43,7 +43,7 @@ function congrats(name, cars){
 	typeAssert(arguments, [String, [Car]]);
 	return "Congratulations, " + name + ". You have " + cars.length + " cars"; 
 }
-congrats("John", new Car("Toyota") );
+congrats("John", [new Car("Toyota"), new Car("BMW")] );
 ```
 
 ## How about more complex types?
