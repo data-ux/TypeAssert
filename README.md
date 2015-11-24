@@ -35,6 +35,17 @@ function congrats(name, car){
 congrats("John", new Car("Toyota") );
 ```
 
+## How can I define the type of array elements?
+Use the array literal `[` `]` with a constructor function inside to define an array of certain type.
+
+```javascript
+function congrats(name, cars){
+	typeAssert(arguments, [String, [Car]]);
+	return "Congratulations, " + name + ". You have " + cars.length + " cars"; 
+}
+congrats("John", new Car("Toyota") );
+```
+
 ## How about more complex types?
 Object interfaces can be defined with JS object literals describing the required properties & methods.
 
